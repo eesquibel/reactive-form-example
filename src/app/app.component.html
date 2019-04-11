@@ -4,7 +4,7 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<form (submit)="Save()">
+<form (ngSubmit)="Save()">
   <app-question *ngFor="let question of Questions" [parent]="arrayOfAnswers" [Data]="question"></app-question>
   <p>
     <button type="submit">Save</button>

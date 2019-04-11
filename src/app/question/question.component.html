@@ -1,9 +1,17 @@
-<div [formGroup]="form">
+<div [formGroup]="form"><!-- Must have a formGroup set in the DOM -->
   <p [innerText]="Data.Text"></p>
   <ol type="A">
-    <li *ngFor="let answer of Data.Answers"><label><input type="radio" formControlName="Answer" [value]="answer">
-        {{ answer.Text}}</label></li>
+    <!-- Loop through the possible answers-->
+    <li *ngFor="let answer of Data.Answers">
+      <!-- Wrap in a label tag to make the whole thing clickable -->
+      <label>
+        <!-- formControlName must match the name of the control as set on the FormGroup -->
+        <!-- Note the control value is set to the Answer object -->
+        <input type="radio" formControlName="Answer" [value]="answer">{{ answer.Text}}
+      </label>
+    </li>
   </ol>
+  <!-- Show an error if the control was touched but has a required error -->
   <p *ngIf="AnswerRadio.touched && AnswerRadio.errors && AnswerRadio.errors['required']">
     You must select an answer before continuing
   </p>
