@@ -1,0 +1,13 @@
+<div [formGroup]="form">
+  <p [innerText]="Data.Text"></p>
+  <ol type="A">
+    <li *ngFor="let answer of Data.Answers"><label><input type="radio" formControlName="Answer" [value]="answer">
+        {{ answer.Text}}</label></li>
+  </ol>
+  <p *ngIf="AnswerRadio.touched && AnswerRadio.errors && AnswerRadio.errors['required']">
+    You must select an answer before continuing
+  </p>
+  <p>Errors: {{ AnswerRadio.errors | json }}</p><!-- Control has an error -->
+  <p>Dirty: {{ AnswerRadio.dirty | json }}</p><!-- Control value has been changed -->
+  <p>Touched: {{ AnswerRadio.touched | json }}</p><!-- Control has been touched -->
+</div>

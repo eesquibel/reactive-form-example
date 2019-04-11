@@ -1,0 +1,68 @@
+[
+  {
+    "Id" : 1,
+    "Text": "You have noticed a slump in business this month. It seems to be time to update your promotions and marketing efforts. How do you feel about this element of business?",
+    "Answers": [
+      {
+        "Text": "I enjoy creating marketing ideas and promotions for clients.",
+        "Points": 4
+      },
+      {
+        "Text": "I may not be the most creative, but I have others who help me bring my ideas to life.",
+        "Points": 3
+      },
+      {
+        "Text": "I know I should do it, but I don’t have to like it!",
+        "Points": 2
+      },
+      {
+        "Text": "I really prefer spending my time with clients and leaving marketing for someone else",
+        "Points": 1
+      }
+    ]
+  },
+  {
+    "Id" : 2,
+    "Text": "Time is of the essence. You are totally booked, have family obligations and need to renew your liability insurance. When it comes to self-direction and time management, how do you handle it?",
+    "Answers": [
+      {
+        "Text": "I appreciate having someone help me stay on track.",
+        "Points": 1
+      },
+      {
+        "Text": "Great, I don’t believe I really need to be managed anymore.",
+        "Points": 4
+      },
+      {
+        "Text": "I’m good at these skills, but still strive to be even better.",
+        "Points": 3
+      },
+      {
+        "Text": "These aren’t my best traits, but I don’t usually fail. ",
+        "Points": 2
+      }
+    ]
+  },
+  {
+    "Id" : 3,
+    "Text": "What is best in life?",
+    "Answers": [
+      {
+        "Text": "See your enemies driven before you",
+        "Points": 0
+      },
+      {
+        "Text": "Crush your enemies",
+        "Points": 0
+      },
+      {
+        "Text": "Hear the lamentation of their women",
+        "Points": 0
+      },
+      {
+        "Text": "Taco Tuesday",
+        "Points": 0
+      }
+    ]
+  }
+]
