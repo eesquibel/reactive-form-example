@@ -6,6 +6,13 @@
 </div>
 <form (ngSubmit)="Save()">
   <app-question *ngFor="let question of Questions" [parent]="arrayOfAnswers" [Data]="question"></app-question>
+
+  <h2>Subform 1</h2>
+  <app-subform-example Question1="How many hours?" Question2="What is the rate?" [parent]="form" groupName="Subform1"></app-subform-example>
+
+  <h2>Subform 2</h2>
+  <app-subform-example Question1="How much commission?" Question2="How much product?" [parent]="form" groupName="Subform2"></app-subform-example>
+
   <p>
     <button type="submit">Save</button>
   </p>
@@ -13,5 +20,8 @@
 <div>
   <p>Score: {{ Score }}</p>
   <p>Form is Valid: {{ arrayOfAnswers.valid }}</p>
-  <pre>{{ arrayOfAnswers.value | json }}</pre>
+  <p>Subform1 Result: {{ form.value.Subform1?.Result }}</p>
+  <p>Subform2 Result: {{ form.value.Subform2?.Result }}</p>
+  <p>form.value:</p>
+  <pre>{{ form.value | json }}</pre>
 </div>

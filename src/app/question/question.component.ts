@@ -56,7 +56,7 @@ export class QuestionComponent implements OnInit {
       Answer: this.AnswerRadio
     });
 
-    // Add this form group to the Form Array from the parent component
+    // Use push() to add this form group to the FormArray from the parent component
     this.parent.push(this.form);
   }
 }

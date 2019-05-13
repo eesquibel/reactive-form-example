@@ -1,0 +1,13 @@
+<p>
+  subform-example works!
+</p>
+<form [formGroup]="form">
+  <div>
+    <label [for]="groupName + '-Value'">{{ Question1 }}</label>
+    <input type="number" [id]="groupName + '-Value'" name="Value" formControlName="Value">
+  </div>
+  <div>
+    <label [for]="groupName + '-Multiplier'">{{ Question2 }}</label>
+    <input type="number" [id]="groupName + '-Multiplier'" name="Multiplier" formControlName="Multiplier">
+  </div>
+</form>

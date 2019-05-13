@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormArray } from '@angular/forms';
+import { FormArray, FormGroup } from '@angular/forms';
 
 import { Answer } from './model/answer.model';
 import { QuestionModel } from './model/question.model';
@@ -16,6 +16,8 @@ interface AnswerForm {
 })
 export class AppComponent implements OnInit {
   title = 'reactive-form-example';
+
+  public form: FormGroup;
 
   /**
    * Form Array for storing the answers
@@ -39,6 +41,10 @@ export class AppComponent implements OnInit {
     // Create an FormArray to store an array of FormGroups that the QuestionComponent will add to
     // Could also just be an array of FormControls
     this.arrayOfAnswers = new FormArray([]);
+
+    this.form = new FormGroup({
+      arrayOfAnswers: this.arrayOfAnswers
+    });
 
     // I stored my question data as a JSON file, so we need to fetch it
     this.http.get<QuestionModel[]>('assets/data/questions.json').subscribe(result => this.Questions = result );
